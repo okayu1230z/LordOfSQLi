@@ -14,6 +14,6 @@
 
 - [darkelf](./doc/darkelf.md)
 
-- [org](./doc/orge.md)
+- [orge](./doc/orge.md)
 
 - [troll](./doc/troll.md)
