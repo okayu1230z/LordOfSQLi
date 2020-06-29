@@ -65,7 +65,7 @@ $query = "select pw from prob_orge where id='admin' and pw='{$_GET[pw]}'";
 
 - シングルクォート (')
 - ダブルクォート (")
-- バックスラッシュ (\)
+- バックスラッシュ (\\)
 - NUL (NULL バイト)
 
 ```?pw=1'||id='admin```
