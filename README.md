@@ -17,3 +17,5 @@
 - [orge](./doc/orge.md)
 
 - [troll](./doc/troll.md)
+
+- [vampire](./doc/vampire.md)
