@@ -2,7 +2,7 @@
 
 ## answer
 
-- [orc](../src/golem.py)
+- [golem](../src/golem.py)
 
 ## problem
 
