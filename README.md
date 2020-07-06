@@ -19,3 +19,5 @@
 - [troll](./doc/troll.md)
 
 - [vampire](./doc/vampire.md)
+
+- [skeleton](./doc/skeleton.md)
