@@ -21,3 +21,5 @@
 - [vampire](./doc/vampire.md)
 
 - [skeleton](./doc/skeleton.md)
+
+- [golem](./doc/golem.md)
