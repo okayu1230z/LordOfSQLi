@@ -9,7 +9,7 @@ def main():
     url = "https://los.eagle-jump.org/golem_39f3348098ccda1e71a4650f40caa037.php"
     ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
     headers = {'User-Agent': ua}
-    cookies = dict(PHPSESSID='cgq355ag1vlid052btnp68fpo7')
+    cookies = dict(PHPSESSID='XXXXXXXXXXXXXXXXXXXX')
 
     chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     password = ""
