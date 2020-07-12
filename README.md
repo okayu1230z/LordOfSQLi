@@ -25,3 +25,5 @@
 - [golem](./doc/golem.md)
 
 - [darkknight](./doc/darkknight.md)
+
+- [bugbear](./doc/bugbear.md)
