@@ -23,3 +23,5 @@
 - [skeleton](./doc/skeleton.md)
 
 - [golem](./doc/golem.md)
+
+- [darkknight](./doc/darkknight.md)
