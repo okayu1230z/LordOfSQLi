@@ -29,3 +29,5 @@
 - [bugbear](./doc/bugbear.md)
 
 - [giant](./doc/giant.md)
+
+- [assassin](./doc/assassin.md)
