@@ -27,3 +27,5 @@
 - [darkknight](./doc/darkknight.md)
 
 - [bugbear](./doc/bugbear.md)
+
+- [giant](./doc/giant.md)
