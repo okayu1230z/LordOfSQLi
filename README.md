@@ -31,3 +31,5 @@
 - [giant](./doc/giant.md)
 
 - [assassin](./doc/assassin.md)
+
+- [zombie_assassin](./doc/zombie_assasin.md)
