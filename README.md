@@ -33,3 +33,5 @@
 - [assassin](./doc/assassin.md)
 
 - [zombie_assassin](./doc/zombie_assasin.md)
+
+- [succubus](./doc/duccubus.md)
