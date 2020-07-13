@@ -35,3 +35,6 @@
 - [zombie_assassin](./doc/zombie_assassin.md)
 
 - [succubus](./doc/succubus.md)
+
+- [nightmare](./doc/nightmare.md)
+
