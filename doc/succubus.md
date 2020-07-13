@@ -55,8 +55,6 @@ if(preg_match('/\'/i', $_GET[pw])) exit("HeHe");
 
 --のあとに空白（%20）が必要なので気をつけること。
 
-
-
 ## references
 
 - [preg_match | php manual](https://www.php.net/manual/ja/function.preg-match.php)
